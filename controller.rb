@@ -1,0 +1,13 @@
+layout('site/layout.html.erb')
+
+ignore('site/css/.sass-cache/')
+ignore('site/css/countdown.css.sass')
+ignore('site/css/nav.css.sass')
+ignore('site/css/header.css.sass')
+ignore('site/css/calendar.css.sass')
+ignore('site/css/facts.css.sass')
+ignore('site/css/footer.css.sass')
+ignore(/\.sass-cache/)
+ignore(/\.vs/)
+ignore('.gitignore')
+ignore('readme.md')
