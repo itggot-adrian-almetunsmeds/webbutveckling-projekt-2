@@ -1,0 +1,30 @@
+.splash_image
+    padding-top: 15px
+    background-image: url("https://picsum.photos/1920/300/")
+    height: 200px
+    width: 100%
+    h1
+        padding-left: 30px
+
+article
+    padding: 15px
+    background-color: white
+    font-size: 1.1rem
+
+.facts
+    background-color: rgba(0,0,0, 0.03)
+    margin-top: 10px
+    display: grid
+    grid-template-rows: auto
+    grid-gap: 20px
+    grid-template-columns: 90px auto
+    grid-template-areas: "article_image article_text"
+    img
+        padding: 5px
+        border-radius: 15px
+        grid-area: "article_image"
+        width: 80px
+        height: 80px
+.facts_text
+    padding: 5px 5px 5px 5px
+    grid-area: "article_text"

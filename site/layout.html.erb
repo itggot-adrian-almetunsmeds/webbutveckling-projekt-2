@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%# This is how you define a variable %>
+    <%# <% i="Page Title" %>
+    <%# This is how you output the variable into the document.
+    Note that it has to be placed inside of something else ie <titlle> <&= i %...</title>  %>
+    <%# <%= i %>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>(H)Jul</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav_menu">
+                <i class="material-icons">menu</i>
+        <ul>
+            <ul id="hem"><a href="index.html">HEM</a></ul>
+            <ul id="jul_fakta"><a href="facts.html">JUL FAKTA</a></ul>
+            <ul id="hjul_fakta">(H)JUL FAKTA</ul>
+            <ul id="dagens_deals">DAGENS DEALS</ul>
+        </ul>
+    </nav>
+    <div class="nav_background"></div>
+        <header>
+            <i class="material-icons">menu</i>
+        <a href="index.html"><h2>(H)JUL
+            <br>
+            (Place an amazing logo here)</h2></a>
+        <!-- :TODO: add the image mentioned above -->
+        </header>
+    <div class="wrapper">
+        <%= yield %>
+        <script src="js/main.js"></script>
+    </div>
+    <footer>
+        <p>Adrian&copy;	2018 </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+.nav_active
+    top: 0px !important
+    left: 0px !important
+.nav_menu
+    z-index: 10001
+    position: fixed
+    top: 0px
+    left: -110vw
+    min-width: 175px
+    max-width: 100vw
+    height: 100vh
+    background-color: white
+    transition: all 0.3s
+    .material-icons
+        position: absolute
+        top: 0.83rem
+        left: 10px
+        font-size: 2.5rem
+        transition: all ease 0.5s
+        transition-timing-function: ease-in
+    i
+        cursor: pointer
+    ul
+        padding: 5px
+        margin: 0
+        margin-top: 60px
+        ul
+            margin-top: 0
+            font-size: 1.5rem
+            a
+                text-decoration: none
+                color: black
+.nav_background
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0px
+    left: -100vw
+    background-color: rgba(0,0,0, 0.625)
+    z-index: 9999
+
+.nav_background_active
+    left: 0px
+.nav_current
+    background-color: green
+.nav_icon_active
+    left: 145px !important

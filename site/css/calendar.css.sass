@@ -1,0 +1,52 @@
+.calendar
+    display: flex
+    flex-wrap: wrap
+    min-height: 40px
+    width: 100vw
+    justify-content: center
+    align-items: center
+    .door
+        width: 60px
+        height: 60px
+        background-color: rgba(144, 238, 144, 0.4)
+        margin: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 2rem
+        border: 2px solid
+        border-color: lightgreen
+        
+.disabled:hover
+    background-color: var(--calendar-disabled-color)
+
+.calendar_content
+    width: 60vw
+    min-height: 100px
+    display: none
+    position: fixed
+    // FIXME: THIS IS BROKEN THE POSITIONING DO NOT WORK WHAT SO EVER.
+    // WHAT DID I DO WRONG?
+    top: 50%
+    left: 20vw
+    background-color: peachpuff
+    display: grid
+    grid-template-columns: 90px auto
+    grid-template-rows: auto
+    grid-template-areas: "image text"
+    margin-top: -50px
+    
+    img
+        grid-area: "image"
+        width: 80px
+        height: 80px
+    .calendar_content_text
+        margin-top: 10px
+        grid-area: "text"
+        text-align: center
+.calendar_content_active
+    display: block
+
+
+
+        
