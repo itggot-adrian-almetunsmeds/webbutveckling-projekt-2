@@ -9,7 +9,7 @@
     min-width: 175px
     max-width: 100vw
     height: 100vh
-    background-color: white
+    background-color: $nav-color
     transition: all 0.3s
     .material-icons
         position: absolute
@@ -29,19 +29,19 @@
             font-size: 1.5rem
             a
                 text-decoration: none
-                color: black
+                color: $link-color
 .nav_background
     width: 100vw
     height: 100vh
     position: fixed
     top: 0px
     left: -100vw
-    background-color: rgba(0,0,0, 0.625)
+    background-color: $background-color
     z-index: 9999
 
 .nav_background_active
     left: 0px
 .nav_current
-    background-color: green
+    background-color: $currently-selected-color
 .nav_icon_active
     left: 145px !important
