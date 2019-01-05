@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   width: 100%;
   display: flex;
@@ -20,6 +21,15 @@ header {
     text-decoration-line: none;
     color: white;
     text-align: center; }
+  header img {
+    transition: all 1s;
+    width: 60px;
+    height: 60px¨;
+    /* ----------- Desktop ----------- */ }
+    @media only screen and (min-width: 1224px) {
+      header img {
+        width: 5rem;
+        height: 5rem; } }
 
 .nav_active {
   top: 0px !important;
@@ -53,7 +63,7 @@ header {
       font-size: 1.5rem; }
       .nav_menu ul ul a {
         text-decoration: none;
-        color: white; }
+        color: #28B0E2; }
 
 .nav_background {
   width: 100vw;
@@ -69,6 +79,8 @@ header {
 
 .nav_current {
   background-color: #FFCD24; }
+  .nav_current a {
+    color: black !important; }
 
 .nav_icon_active {
   left: 145px !important; }
@@ -100,8 +112,9 @@ header {
   justify-content: center;
   align-items: center; }
   .calendar a {
-    color: #2aabe4; }
+    color: #28B0E2; }
   .calendar .door {
+    cursor: pointer;
     width: 60px;
     height: 60px;
     background-color: rgba(0, 0, 41, 0.9);
@@ -112,12 +125,41 @@ header {
     font-size: 2rem;
     border: 2px solid;
     border-color: #010d2b;
-    transition: all 0.2s; }
+    transition: background-color 0.8s; }
 
-.disabled:hover {
+.disabled:hover, .disabled:active {
   background-color: rgba(255, 0, 0, 0.65);
-  scale: 1.2; }
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: none;
+  -webkit-backface-visibility: none;
+  perspective: 1000px;
+  -webkit-perspective: 1000px; }
 
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, 0, 0); } }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
 .calendar_content {
   width: 80vw;
   min-height: 100px;
@@ -125,14 +167,15 @@ header {
   position: fixed;
   top: 50%;
   left: 10vw;
-  background-color: peachpuff;
+  background-color: #01015c;
   margin-top: -50px;
   border-radius: 15px; }
   .calendar_content img {
     grid-area: "image";
     width: 80px;
     height: 80px;
-    margin: auto; }
+    margin: auto;
+    border-radius: 15px; }
   .calendar_content .calendar_content_text {
     margin: 10px 5px 10px 5px;
     grid-area: "text";
@@ -159,35 +202,46 @@ header {
 
 .splash_image {
   padding-top: 15px;
-  background-image: url("https://picsum.photos/1920/300/");
-  height: 200px;
+  height: 6rem;
   width: 100%; }
   .splash_image h1 {
     padding-left: 30px; }
 
 article {
-  padding: 15px;
-  background-color: white;
-  font-size: 1.1rem; }
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  /* ----------- Desktop ----------- */ }
+  @media only screen and (min-width: 1224px) {
+    article {
+      display: flex;
+      flex-wrap: wrap; } }
 
 .facts {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 3px;
   margin-top: 10px;
+  padding: 10px 0 10px 0;
   display: grid;
   grid-template-rows: auto;
   grid-gap: 20px;
   grid-template-columns: 90px auto;
-  grid-template-areas: "article_image article_text"; }
+  grid-template-areas: "article_image article_text";
+  /* ----------- Desktop ----------- */ }
+  @media only screen and (min-width: 1224px) {
+    .facts {
+      width: 49.6%; }
+      .facts:nth-child(2n) {
+        margin-left: 10px; } }
   .facts img {
     padding: 5px;
     border-radius: 15px;
-    grid-area: "article_image";
+    grid-area: article_image;
     width: 80px;
     height: 80px; }
 
 .facts_text {
   padding: 5px 5px 5px 5px;
-  grid-area: "article_text"; }
+  grid-area: article_text; }
 
 footer {
   width: 100%;
@@ -199,10 +253,21 @@ footer {
 body {
   margin: 0;
   min-height: 100vh;
+  min-width: 200px;
   background-image: url("../img/art-blurred-blurry-383646_1080_720.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
-  color: #2aabe4; }
+  color: #28B0E2;
+  background-size: cover;
+  background-position-x: -720px;
+  /* ----------- Smartphone > Tablet ----------- */
+  /* ----------- Desktop ----------- */ }
+  @media only screen and (min-width: 570px) {
+    body {
+      background-position-x: -200px; } }
+  @media only screen and (min-width: 1224px) {
+    body {
+      background-position-x: 0; } }
 
 a {
-  color: white; }
+  color: white;
+  text-decoration: none; }

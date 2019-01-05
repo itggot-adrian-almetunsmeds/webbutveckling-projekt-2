@@ -8,6 +8,7 @@
     a
         color: $calendar-link-color
     .door
+        cursor: pointer
         width: 60px
         height: 60px
         background-color: $door-color
@@ -18,11 +19,48 @@
         font-size: 2rem
         border: 2px solid
         border-color: $door-border-color
-        transition: all 0.2s 
-        
-.disabled:hover
+        transition: background-color 0.8s
+//  Webkit support retrived from https://autoprefixer.github.io/
+.disabled:hover, .disabled:active
     background-color: $calendar-disabled-color
-    scale: 1.2
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+    -webkit-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+    transform: translate3d(0, 0, 0)
+    -webkit-transform: translate3d(0, 0, 0)
+    backface-visibility: none
+    -webkit-backface-visibility: none
+    perspective: 1000px
+    -webkit-perspective: 1000px
+
+@-webkit-keyframes shake
+    10%, 90%
+        -webkit-transform: translate3d(-1px, 0, 0)
+        transform: translate3d(-1px, 0, 0)
+   
+    20%, 80%
+        -webkit-transform: translate3d(2px, 0, 0)
+        transform: translate3d(2px, 0, 0)
+  
+    30%, 50%, 70%
+        -webkit-transform: translate3d(-4px, 0, 0)
+        transform: translate3d(-4px, 0, 0) 
+    40%, 60%
+        -webkit-transform: translate3d(4px, 0, 0)
+        transform: translate3d(4px, 0, 0)
+
+@keyframes shake
+    10%, 90% 
+        transform: translate3d(-1px, 0, 0)
+    
+    20%, 80% 
+        transform: translate3d(2px, 0, 0)
+  
+    30%, 50%, 70% 
+        transform: translate3d(-4px, 0, 0)
+  
+    40%, 60% 
+        transform: translate3d(4px, 0, 0)
+
 .calendar_content
     width: 80vw
     min-height: 100px
@@ -38,6 +76,7 @@
         width: 80px
         height: 80px
         margin: auto
+        border-radius: 15px
     .calendar_content_text
         margin: 10px 5px 10px 5px
         grid-area: "text"

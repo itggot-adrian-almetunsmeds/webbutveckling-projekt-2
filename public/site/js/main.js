@@ -40,7 +40,7 @@ if (window.location.href.includes("index.html") === true) {
     // THIS IS FOR THE COUNTDOWN TIMER
     Updatetime();
     // Call the function when loaded to avoid the 1000ms initial gap
-    var countDownTarget = new Date("Dec 24, 2018 00:00:01").getTime();
+    var countDownTarget = new Date("Dec 24, 2019 00:00:01").getTime();
     var updateInterval = setInterval(Updatetime, 1000);
 
     function Updatetime(input) {
