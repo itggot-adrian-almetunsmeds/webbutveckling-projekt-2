@@ -17,10 +17,8 @@ function navigation(input) {
     navIcon.classList.toggle("nav_icon_active");
     if (navIcon.innerHTML == "close") {
         navIcon.innerHTML = "menu";
-        console.log(navIcon.innerHTML);
     } else {
         navIcon.innerHTML = "close";
-        console.log(navIcon.innerHTML);
     }
 }
 
@@ -52,7 +50,6 @@ if (window.location.href.includes("index.html") === true) {
         let secounds = Math.floor(deltaTime % (1000 * 60) / (1000));
         document.querySelector(".time_left > p").innerHTML = days + " dagar " + hours + " timmar " + minutes + " minuter " + secounds + " sekunder";
 
-        console.log(Updatetime)
         if (deltaTime < 0 && deltaTime > (-86400000)) {
             christmasDay()
         } else if (deltaTime < (-86400000)) {
@@ -62,7 +59,7 @@ if (window.location.href.includes("index.html") === true) {
 
     function error(input) {
         let placeError = document.querySelector(".countdown")
-        placeError.innerHTML = "An error has occured. Please report this to the administrator."
+        placeError.innerHTML = "An error has occurred. Please report this to the administrator."
     }
 
     function christmasDay(input) {
