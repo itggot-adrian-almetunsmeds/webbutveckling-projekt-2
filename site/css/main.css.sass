@@ -15,9 +15,12 @@ body
     color: $text-color
     background-size: cover
     background-position-x: -720px    
-    /* ----------- Smartphone > Tablet ----------- */
+    /* ----------- Smartphone > mini Tablet ----------- */
     @media only screen and (min-width: 570px)
         background-position-x: -200px
+    /* ----------- Smartphone > large Tablet ----------- */
+    @media only screen and (min-width: 1000px)
+        background-position-x: -50px
 
     /* ----------- Desktop ----------- */
     @media only screen and (min-width: $width-desktop)
