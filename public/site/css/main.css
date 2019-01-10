@@ -50,8 +50,7 @@ header {
     top: 0.83rem;
     left: 10px;
     font-size: 2.5rem;
-    transition: all ease 0.5s;
-    transition-timing-function: ease-in; }
+    transition: all 0.35s; }
   .nav_menu i {
     cursor: pointer; }
   .nav_menu ul {
@@ -86,7 +85,6 @@ header {
   left: 145px !important; }
 
 .countdown {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,11 +102,13 @@ header {
       margin: 4px;
       text-align: center; }
 
+.textblock {
+  margin: 12px; }
+
 .calendar {
   display: flex;
   flex-wrap: wrap;
   min-height: 40px;
-  width: 100vw;
   justify-content: center;
   align-items: center; }
   .calendar a {
@@ -259,11 +259,15 @@ body {
   color: #28B0E2;
   background-size: cover;
   background-position-x: -720px;
-  /* ----------- Smartphone > Tablet ----------- */
+  /* ----------- Smartphone > mini Tablet ----------- */
+  /* ----------- Smartphone > large Tablet ----------- */
   /* ----------- Desktop ----------- */ }
   @media only screen and (min-width: 570px) {
     body {
       background-position-x: -200px; } }
+  @media only screen and (min-width: 1000px) {
+    body {
+      background-position-x: -50px; } }
   @media only screen and (min-width: 1224px) {
     body {
       background-position-x: 0; } }

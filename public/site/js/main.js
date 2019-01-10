@@ -17,10 +17,8 @@ function navigation(input) {
     navIcon.classList.toggle("nav_icon_active");
     if (navIcon.innerHTML == "close") {
         navIcon.innerHTML = "menu";
-        console.log(navIcon.innerHTML);
     } else {
         navIcon.innerHTML = "close";
-        console.log(navIcon.innerHTML);
     }
 }
 
@@ -40,7 +38,7 @@ if (window.location.href.includes("index.html") === true) {
     // THIS IS FOR THE COUNTDOWN TIMER
     Updatetime();
     // Call the function when loaded to avoid the 1000ms initial gap
-    var countDownTarget = new Date("Dec 24, 2019 00:00:01").getTime();
+    var countDownTarget = new Date("Feb 20, 2019 00:00:01").getTime();
     var updateInterval = setInterval(Updatetime, 1000);
 
     function Updatetime(input) {
@@ -50,9 +48,8 @@ if (window.location.href.includes("index.html") === true) {
         let hours = Math.floor(deltaTime % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
         let minutes = Math.floor(deltaTime % (1000 * 60 * 60) / (1000 * 60));
         let secounds = Math.floor(deltaTime % (1000 * 60) / (1000));
-        document.querySelector(".time_left > p").innerHTML = days + " dagar " + hours + " timmar " + minutes + " minuter " + secounds + " sekunder";
+        document.querySelector(".time_left > p").innerHTML = days + " : " + hours + " : " + minutes + " : " + secounds + " ";
 
-        console.log(Updatetime)
         if (deltaTime < 0 && deltaTime > (-86400000)) {
             christmasDay()
         } else if (deltaTime < (-86400000)) {
@@ -62,7 +59,7 @@ if (window.location.href.includes("index.html") === true) {
 
     function error(input) {
         let placeError = document.querySelector(".countdown")
-        placeError.innerHTML = "An error has occured. Please report this to the administrator."
+        placeError.innerHTML = "An error has occurred. Please report this to the administrator."
     }
 
     function christmasDay(input) {
@@ -93,12 +90,11 @@ if (window.location.href.includes("index.html") === true) {
 
         // If the date has not passed then add the disabled class to it.
         let currentDate = new Date();
-        if ((currentDate.getMonth() + 1) < 12 || currentDate.getDate() < day) {
+        if ((currentDate.getMonth() + 1) < 1 || currentDate.getDate() < day) {
             node.className += " disabled"
         } else {
             node.setAttribute('onclick', `calendarReveal(${day})`);
         }
-        // Add eventclicker to all of the boxes in the calendar.
     }
 
     function calendarReveal(input) {

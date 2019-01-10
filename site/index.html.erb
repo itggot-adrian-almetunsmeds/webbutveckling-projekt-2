@@ -1,43 +1,46 @@
 <div class="calendar_background" onclick="calendarReveal('close')"></div>
 
 <div class="countdown">
-    <p>Snart är det (H)julafton det är enbart:</p>
+    <p>Det är enbart</p>
     <div class=" time_left">
         <p>DD:HH:MN:SE</p>
     </div>
-    <p>Kvar till (H)julafton</p>
+    <div class="textblock">
+        <p>Kvar till aftonen<br></p> 
+        <p>Men är det Jul dag eller Hjul dag?<br>Låt kalendern säga dig det.</p> 
+    </div>
 </div>
 <div class="calendar">
 </div>
-    <% 
-        date = 1
-        i=0
-        # In the array 1 place ref to image, then after that place 
-        # the text that will be displayed, then the alt text
-        image_content = [
-        "img/cold-colors-forest-688660_560_420.jpg", "This text will be displayed", "This is the alt text",
-        "https://picsum.photos/200/300/", "This text will be displayed somewhere else", "This is more of the alternative text",
-        "https://picsum.photos/200/300/", "This is less random text", "more scrapy text",
-        "https://picsum.photos/200/300/?blur", "Even more text or something dolorMagni,", "And here we go again",  
-        "https://picsum.photos/200/300/", "Will this work? Lorem ipsum, dolor sit Magni, voluptas atque minima? ", "What now?",
-        "https://picsum.photos/200/300/", "Do I need more random text here?", ".....",
-        "https://picsum.photos/200/300/", "Affirm, I do need more text here Lorem. Non ea  voluptatem odio veritatis quod dolorem libero. Rem, architecto. Harum inventore placeat officiis adipisci excepturi? ", "Random again",
-        "https://picsum.photos/200/300/", "How long will I have to write here?", "And the last one",
-        "", "This is the tenth day", "The photo represents the dangerous life of a snowflace",
-        "", "This is the eleventh day of december", "The alt text, that provde no value at the moment." ]
-        
-        while date<=24
-    %>
- 
-    <div class="calendar_content" id="calendar_content_<%=date%>">
-            <img src="<%=image_content[i]%>" alt="<%=image_content[i+2]%>">
-            <div class="calendar_content_text"><%=image_content[i+1]%></div>
-    </div>
-        
-    <%
-            date += 1
-            i += 3
-        end
-    %>
+<% 
+date = 1
+i=0
+# In the array 1 place ref to image, then after that place 
+# the text that will be displayed, then the alt text
+image_content = [
+"img/cold-colors-forest-688660_560_420.jpg", 'Idag är det en Juldag! Det är ju ändå den 1 December. <br> "Anledningen till att vi alla går på högvarv inför julen med den eviga, oåterhållsamma och ofta knasiga julklappsshoppingen är antagligen att vi inte riktigt vet hur vi ska uttrycka vår kärlek i ord." -Livet.se', "Bild på en snötäckt väg ute i skogen.",
+"https://picsum.photos/200/300/", "This text will be displayed somewhere else", "This is more of the alternative text",
+"https://picsum.photos/200/300/", "This is less random text", "more scrapy text",
+"https://picsum.photos/200/300/?blur", 'Idag är det en Juldag! <br> "Det måste vara en mänsklig rättighet att tycka att det är fint att vara ensam också på en julafton." -Livet.se', "More alt text",  
+"https://picsum.photos/200/300/", "Will this work? Lorem ipsum, dolor sit Magni, voluptas atque minima? ", "What now?",
+"https://picsum.photos/200/300/", "Do I need more random text here?", ".....",
+"https://picsum.photos/200/300/", "Affirm, I do need more text here Lorem. Non ea  voluptatem odio veritatis quod dolorem libero. Rem, architecto. Harum inventore placeat officiis adipisci excepturi? ", "Random again",
+"https://picsum.photos/200/300/", "How long will I have to write here?", "And the last one",
+"", "This is the tenth day", "The photo represents the dangerous life of a snowflace",
+"", "This is the eleventh day of december", "The alt text, that provde no value at the moment." ]
+
+while date<=24
+%>
+
+<div class="calendar_content" id="calendar_content_<%=date%>">
+    <img src="<%=image_content[i]%>" alt="<%=image_content[i+2]%>">
+    <div class="calendar_content_text"><%=image_content[i+1]%></div>
+</div>
+
+<%
+date += 1
+i += 3
+end
+%>
 
 

@@ -2,7 +2,6 @@
     display: flex
     flex-wrap: wrap
     min-height: 40px
-    width: 100vw
     justify-content: center
     align-items: center
     a
@@ -20,7 +19,8 @@
         border: 2px solid
         border-color: $door-border-color
         transition: background-color 0.8s
-//  Webkit support retrived from https://autoprefixer.github.io/
+
+    //  Webkit support retrived from https://autoprefixer.github.io/
 .disabled:hover, .disabled:active
     background-color: $calendar-disabled-color
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
