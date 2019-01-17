@@ -1,0 +1,32 @@
+<div class="deals">
+    <div class="deals_dropdown">
+        
+    <\div>
+    
+    <% 
+    content = ["image url", "description text", "img alt text", "price"]
+    i = 0
+    while i < content.length
+    %>
+    
+    
+    
+    <div class="deals_content" id="deal_<%=i%>">
+        <img src="<%=content[i]%>" alt="<%=content[i+2]%>">
+        <div class="deals_content_text"><%=content[i+1]%></div>
+        <div class="deals_price"><%=content[i+3]%></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <% 
+        i += 3
+    end
+    %>
+    
+    
+</div>
