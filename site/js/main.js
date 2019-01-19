@@ -1,3 +1,7 @@
+// Configurable variables
+var targetdate = "Feb 20, 2019 00:00:01";
+var targetmonth = 12;
+
 // Global JS functions
 const calendarBackground = document.querySelector(".calendar_background");
 // THIS IS TO TOGGLE THE NAV MENU
@@ -28,6 +32,17 @@ if (window.location.href.includes("facts.html") === true) {
     let navActive = document.getElementById("jul_fakta");
     navActive.classList.toggle("nav_current");
 }
+// JS functions to load on the dagens_deals page
+if (window.location.href.includes("deals") === true) {
+    // Current position highlighted in nav
+    let navActive = document.getElementById("dagens_deals");
+    navActive.classList.toggle("nav_current");
+
+    function dropDownMenu(input){
+        let dropDownMenu = document.querySelector(".deals_dropdown_menu");
+        dropDownMenu.classList.toggle("show_menu");
+    }
+}
 
 // JS functions to load on the index page
 if (window.location.href.includes("index.html") === true) {
@@ -38,7 +53,7 @@ if (window.location.href.includes("index.html") === true) {
     // THIS IS FOR THE COUNTDOWN TIMER
     Updatetime();
     // Call the function when loaded to avoid the 1000ms initial gap
-    var countDownTarget = new Date("Dec 24, 2019 00:00:01").getTime();
+    var countDownTarget = new Date(targetdate).getTime();
     var updateInterval = setInterval(Updatetime, 1000);
 
     function Updatetime(input) {
@@ -90,7 +105,7 @@ if (window.location.href.includes("index.html") === true) {
 
         // If the date has not passed then add the disabled class to it.
         let currentDate = new Date();
-        if ((currentDate.getMonth() + 1) < 1 || currentDate.getDate() < day) {
+        if ((currentDate.getMonth() + 1) < targetmonth     || currentDate.getDate() < day) {
             node.className += " disabled"
         } else {
             node.setAttribute('onclick', `calendarReveal(${day})`);
