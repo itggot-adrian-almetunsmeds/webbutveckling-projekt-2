@@ -1,32 +1,39 @@
-<div class="deals">
-    <div class="deals_dropdown">
-        
-    <\div>
-    
-    <% 
-    content = ["image url", "description text", "img alt text", "price"]
-    i = 0
-    while i < content.length
-    %>
-    
-    
-    
-    <div class="deals_content" id="deal_<%=i%>">
-        <img src="<%=content[i]%>" alt="<%=content[i+2]%>">
-        <div class="deals_content_text"><%=content[i+1]%></div>
-        <div class="deals_price"><%=content[i+3]%></div>
+<div class="deals_wrapper">
+    <div class="deals_dropdown" onclick='dropDownMenu("deals")'>
+        <p>Dagens kap</p>
+        <i class="material-icons">keyboard_arrow_down</i>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    <% 
-        i += 3
-    end
-    %>
-    
-    
+    <div class="deals_dropdown_menu">
+        <ul><a href="deals_new.html">Kap imorgon</a></ul>
+        <ul><a href="deals.html">Dagens kap</a></ul>
+        <ul><a href="deals_old.html">Gårdagens kap</a></ul>
+    </div>
+    <div class="deals">
+
+        <% 
+        content = File.readlines('deals.txt')
+        i = 6
+        iteration = 0
+        while iteration < ((content.length-6)/5)
+        %>
+
+        <div class="deals_content" id="deal_<%=iteration%>">
+            <img src="<%=content[i].chomp%>" alt="<%=content[i+1].chomp%>">
+            <div class="deals_content_text">
+                <h3><%=content[i+2].chomp%></h3>
+                <p><%=content[i+3].chomp%></p>
+            </div>
+            <div class="deals_price">
+                <p>Normal pris <%=content[i+5].chomp%></p>
+                <%=content[i+4].chomp%>
+            </div>
+        </div>
+
+        <% 
+            i += 6
+            iteration += 1
+        end
+        %>
+
+    </div>
 </div>

@@ -1,0 +1,30 @@
+image url,          This is only a template row
+img alt text,       This is only a template row
+product name        This is only a template row
+description text,   This is only a template row
+120$                This is only a template row
+300$                This is only a template row
+https://images.unsplash.com/photo-1483705385549-e04ea91e0011?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+Baby Groot
+Baby Groot - Guardians of The Galaxy Action Figur
+Passar för små plantor eller perfekt för att hålla reda på dina pennor. En rolig dekoration för hemmet, gården, kontoret eller bilen. Groot är även den perfekta presenten för familjen eller vännerna. <br> Material: PVC. Höjd 17cm <br>*Alla figurer är handgjorda så små varationer kan förekomma vilket gör just din figur helt unik.
+67 SEK
+120 SEK
+https://images.unsplash.com/photo-1542889692-aaed1adac371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+Amazon Echo - smart högtalare
+Amazon Echo - Personlig assistent
+Amazon Echo ansluter till Alexa en molnbaserad röst service, spela musik, ring, sätt timrar och alarm, fråga frågor, ge den information, kolla vädret eller hantera ditt smarta hem med Alexa.<br>Anslutningar: 3,5mm ljudutgång, Blouetooth, Wifi 6.
+990 SEK
+1050 SEK
+image url
+img alt text
+product name
+description text, this is text that will do something when it is finished
+1500$
+1780$
+image url
+img alt text
+product name
+description text, this is text that will do something when it is finished
+1500$
+1780$
