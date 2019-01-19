@@ -18,30 +18,29 @@
 
 <body>
     <nav class="nav_menu">
-                <i class="material-icons">menu</i>
+        <i class="material-icons">menu</i>
         <ul>
             <ul id="hem"><a href="index.html">HEM</a></ul>
             <ul id="jul_fakta"><a href="facts.html">JULFAKTA</a></ul>
             <ul id="hjul_fakta">(H)JULFAKTA</ul>
-            <ul id="dagens_deals">DAGENS DEALS</ul>
+            <ul id="dagens_deals"><a href="deals.html">ERBJUDANDEN</a></ul>
         </ul>
     </nav>
     <%# These will be displayed when opening an item. 
-    And be able to close the object by clicking on it %>
+        And be able to close the object by clicking on it %>
     <div class="nav_background"></div>
-        <header>
-            <i class="material-icons">menu</i>
+    <header>
+        <i class="material-icons">menu</i>
         <a href="index.html">
             <img src="img/logo.svg" alt="Logo: Blue circle with lines.">
         </a>
-        <!-- :TODO: add the image mentioned above -->
-        </header>
+    </header>
     <div class="wrapper">
         <%= yield %>
         <script src="js/main.js"></script>
     </div>
     <footer>
-        <p>Adrian&copy;	2018 - 2019 </p>
+        <p>Adrian&copy; 2018 - 2019 </p>
     </footer>
 </body>
 

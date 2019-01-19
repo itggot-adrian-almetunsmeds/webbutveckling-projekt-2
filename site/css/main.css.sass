@@ -7,6 +7,7 @@
 @import 'footer.css.sass'
 @import 'deals.css.sass'
 
+    
 body
     margin: 0
     min-height: 100vh
@@ -17,15 +18,22 @@ body
     background-size: cover
     background-position-x: -720px    
     /* ----------- Smartphone > mini Tablet ----------- */
+    
     @media only screen and (min-width: 570px)
         background-position-x: -200px
     /* ----------- Smartphone > large Tablet ----------- */
     @media only screen and (min-width: 1000px)
         background-position-x: -50px
-
     /* ----------- Desktop ----------- */
     @media only screen and (min-width: $width-desktop)
         background-position-x: 0    
+
 a 
     color: $link-color
     text-decoration: none
+
+.wrapper
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
