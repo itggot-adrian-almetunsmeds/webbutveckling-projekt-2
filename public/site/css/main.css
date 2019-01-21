@@ -299,7 +299,7 @@ footer {
 
 .deals_price {
   grid-area: price;
-  color: green;
+  color: #FFCD24;
   text-align: right;
   padding-right: 10%;
   font-size: 1.3rem;
