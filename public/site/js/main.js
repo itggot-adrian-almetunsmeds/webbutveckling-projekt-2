@@ -12,7 +12,7 @@ navBackground.addEventListener("click", navigation)
 let navButton2 = document.querySelector(".nav_menu > i ");
 navButton2.addEventListener("click", navigation)
 // Function for the nav menu
-function navigation(input) {
+function navigation() {
     navMenu = document.querySelector(".nav_menu");
     navMenu.classList.toggle("nav_active");
     navBackground = document.querySelector(".nav_background");
@@ -39,12 +39,12 @@ function calendarReveal(input) {
     }
 }
 // Dropdown menu function
-function dropDownMenu(input) {
+function dropDownMenu() {
     let dropDownMenu = document.querySelector(".deals_dropdown_menu");
     dropDownMenu.classList.toggle("show_menu");
 }
 // Countdown timer
-function Updatetime(input) {
+function Updatetime() {
     let today = new Date().getTime();
     let deltaTime = countDownTarget - today;
     let days = Math.floor(deltaTime / (1000 * 60 * 60 * 24));
@@ -61,12 +61,12 @@ function Updatetime(input) {
 }
 
 // Used in conjunction with the countdown
-function error(input) {
+function error() {
     let placeError = document.querySelector(".countdown")
     placeError.innerHTML = "An error has occurred. Please report this to the administrator."
 }
 
-function christmasDay(input) {
+function christmasDay() {
     let placeError = document.querySelector(".countdown")
     placeError.innerHTML = "Det är julafton idag!"
 }
