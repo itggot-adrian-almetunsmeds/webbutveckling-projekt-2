@@ -1,6 +1,6 @@
 // Configurable variables
 var targetdate = "Feb 20, 2019 00:00:01";
-var targetmonth = 12;
+var targetmonth = 1;
 
 // Global JS functions
 const calendarBackground = document.querySelector(".calendar_background");
@@ -38,7 +38,7 @@ if (window.location.href.includes("deals") === true) {
     let navActive = document.getElementById("dagens_deals");
     navActive.classList.toggle("nav_current");
 
-    function dropDownMenu(input){
+    function dropDownMenu(input) {
         let dropDownMenu = document.querySelector(".deals_dropdown_menu");
         dropDownMenu.classList.toggle("show_menu");
     }
@@ -96,7 +96,6 @@ if (window.location.href.includes("index.html") === true) {
         var node = document.createElement("li");
         node.id = "door" + day;
         node.className = "door";
-        // node.onClick = calendarReveal(day);
         adventCalendar.appendChild(node);
 
         var innerNode = document.createElement("a");
@@ -105,116 +104,25 @@ if (window.location.href.includes("index.html") === true) {
 
         // If the date has not passed then add the disabled class to it.
         let currentDate = new Date();
-        if ((currentDate.getMonth() + 1) < targetmonth     || currentDate.getDate() < day) {
+        if ((currentDate.getMonth() + 1) < targetmonth || currentDate.getDate() < day) {
             node.className += " disabled"
         } else {
             node.setAttribute('onclick', `calendarReveal(${day})`);
         }
     }
-
+    // Function for the calendar popups
     function calendarReveal(input) {
-        if (input === 1) {
-            document.getElementById("calendar_content_1").classList.toggle("calendar_content_active");
+        if (input != "close") {
+            let id = "calendar_content_" + input
+            document.getElementById(id).classList.toggle("calendar_content_active");
             calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_1");
-        } else if (input === 2) {
-            document.getElementById("calendar_content_2").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_2");
-        } else if (input === 3) {
-            document.getElementById("calendar_content_3").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_3");
-        } else if (input === 4) {
-            document.getElementById("calendar_content_4").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_4");
-        } else if (input === 5) {
-            document.getElementById("calendar_content_5").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_5");
-        } else if (input === 6) {
-            document.getElementById("calendar_content_6").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_6");
-        } else if (input === 7) {
-            document.getElementById("calendar_content_7").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_7");
-        } else if (input === 8) {
-            document.getElementById("calendar_content_8").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_8");
-        } else if (input === 9) {
-            document.getElementById("calendar_content_9").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_9");
-        } else if (input === 10) {
-            document.getElementById("calendar_content_10").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_10");
-        } else if (input === 11) {
-            document.getElementById("calendar_content_11").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_11");
-        } else if (input === 12) {
-            document.getElementById("calendar_content_12").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_12");
-        } else if (input === 13) {
-            document.getElementById("calendar_content_13").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_13");
-        } else if (input === 14) {
-            document.getElementById("calendar_content_14").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_14");
-        } else if (input === 15) {
-            document.getElementById("calendar_content_15").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_15");
-        } else if (input === 16) {
-            document.getElementById("calendar_content_16").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_16");
-        } else if (input === 17) {
-            document.getElementById("calendar_content_17").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_17");
-        } else if (input === 18) {
-            document.getElementById("calendar_content_18").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_18");
-        } else if (input === 19) {
-            document.getElementById("calendar_content_19").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_19");
-        } else if (input === 20) {
-            document.getElementById("calendar_content_20").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_20");
-        } else if (input === 21) {
-            document.getElementById("calendar_content_21").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_21");
-        } else if (input === 22) {
-            document.getElementById("calendar_content_22").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_22");
-        } else if (input === 23) {
-            document.getElementById("calendar_content_23").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_23");
-        } else if (input === 24) {
-            document.getElementById("calendar_content_24").classList.toggle("calendar_content_active");
-            calendarBackground.classList.toggle("calendar_background_active");
-            lastActive = document.getElementById("calendar_content_24");
-        } else if (input === "close") {
-            document.getElementById("calendar_content_24");
+            lastActive = document.getElementById(id);
+        }
+        if (input === "close") {
             lastActive.classList.toggle("calendar_content_active");
             calendarBackground.classList.toggle("calendar_background_active");
         }
     }
 };
 
-// console.log(document.querySelector("header > i"))
+// console.log("test")
