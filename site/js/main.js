@@ -110,9 +110,9 @@ if (window.location.href.includes("index.html") === true) {
     navActive.classList.toggle("nav_current");
     // THIS IS FOR THE COUNTDOWN TIMER
     Updatetime();
-    // Call the function when loaded to avoid the 1000ms initial gap then setInterval
+    // Call the function when loaded to avoid the 1000ms initial gap then every second call Updatetime
     var countDownTarget = new Date(targetdate).getTime();
-    var updateInterval = setInterval(Updatetime, 1000);
+    setInterval(Updatetime, 1000);
 
     // This is for the calendar
     // It has NO autoupdate at the moment. TODO: Add auto update of doors and not 
