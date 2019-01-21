@@ -26,14 +26,14 @@
     //  Webkit support retrived from https://autoprefixer.github.io/
 .disabled:hover, .disabled:active
     background-color: $calendar-disabled-color
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
     -webkit-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
-    transform: translate3d(0, 0, 0)
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
     -webkit-transform: translate3d(0, 0, 0)
-    backface-visibility: none
+    transform: translate3d(0, 0, 0)
     -webkit-backface-visibility: none
-    perspective: 1000px
+    backface-visibility: none
     -webkit-perspective: 1000px
+    perspective: 1000px
 
 @-webkit-keyframes shake
     10%, 90%
