@@ -70,7 +70,7 @@ if (window.location.href.includes("index.html") === true) {
         } else if (deltaTime < (-86400000)) {
             error()
         }
-    };
+    }
 
     function error(input) {
         let placeError = document.querySelector(".countdown")
@@ -123,6 +123,6 @@ if (window.location.href.includes("index.html") === true) {
             calendarBackground.classList.toggle("calendar_background_active");
         }
     }
-};
+}
 
 // console.log("test")
