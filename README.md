@@ -1,5 +1,5 @@
 # webbutveckling-projekt-2
-
+[![CodeFactor](https://www.codefactor.io/repository/github/itggot-adrian-almetunsmeds/webbutveckling-projekt-2/badge)](https://www.codefactor.io/repository/github/itggot-adrian-almetunsmeds/webbutveckling-projekt-2)
 ## Tema
 (H)Jul!!
 
