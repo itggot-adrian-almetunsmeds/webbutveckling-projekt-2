@@ -1,3 +1,5 @@
+require 'yaml'
+
 layout('site/layout.html.erb')
 
 ignore('site/css/.sass-cache/')
@@ -9,10 +11,8 @@ ignore('site/css/facts.css.sass')
 ignore('site/css/footer.css.sass')
 ignore('site/css/variables.css.sass')
 ignore('site/css/deals.css.sass')
-ignore('site/deals.txt')
-ignore('site/deals_old.txt')
-ignore('site/deals_new.txt')
 ignore(/\.sass-cache/)
+ignore(/data/)
 ignore(/\.vs/)
 ignore(/misc/)
 ignore(/psd/)
