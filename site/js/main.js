@@ -19,11 +19,6 @@ function navigation() {
     navBackground.classList.toggle("nav_background_active");
     navIcon = document.querySelector(".nav_menu > i");
     navIcon.classList.toggle("nav_icon_active");
-    if (navIcon.innerHTML == "close") {
-        navIcon.innerHTML = "menu";
-    } else {
-        navIcon.innerHTML = "close";
-    }
 }
 // Function for the calendar popups
 function calendarReveal(input) {
@@ -101,6 +96,12 @@ if (window.location.href.includes("facts.html") === true) {
 if (window.location.href.includes("deals") === true) {
     // Current position highlighted in nav
     let navActive = document.getElementById("dagens_deals");
+    navActive.classList.toggle("nav_current");
+}
+// JS functions to load on the hjul facts page
+if (window.location.href.includes("hjul.html") === true) {
+    // Current position highlighted in nav
+    let navActive = document.getElementById("hjul_fakta");
     navActive.classList.toggle("nav_current");
 }
 // JS functions to load on the index page
