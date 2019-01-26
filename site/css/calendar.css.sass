@@ -76,10 +76,15 @@
     border-radius: 15px
     img
         grid-area: "image"
-        width: 80px
-        height: 80px
+        max-width: 90px
+        max-height: 90px
         margin: auto
         border-radius: 15px
+            /* ----------- Desktop ----------- */
+        @media only screen and (min-width: $width-desktop)
+            max-width: 200px
+            height: 200px
+            border-radius: 5px
     .calendar_content_text
         margin: 10px 5px 10px 5px
         grid-area: "text"
@@ -88,9 +93,12 @@
 
 .calendar_content_active
     display: grid
-    grid-template-columns: 90px auto
+    grid-template-columns: 80px auto
     grid-template-rows: auto
     grid-template-areas: "image text"
+        /* ----------- Desktop ----------- */
+    @media only screen and (min-width: $width-desktop)
+        grid-template-columns: 200px auto
     
 .calendar_background
     position: fixed
