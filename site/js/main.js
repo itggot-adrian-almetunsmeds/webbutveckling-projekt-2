@@ -1,6 +1,6 @@
 // Configurable variables
-var targetdate = "Feb 20, 2019 00:00:01";
-var targetmonth = 1;
+var targetdate = "Dec 24, 2019 00:00:01";
+var targetmonth = 12;
 
 // Global JS functions
 const calendarBackground = document.querySelector(".calendar_background");
