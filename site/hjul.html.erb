@@ -1,0 +1,17 @@
+<div class="splash_image">
+    <h1>HJULFAKTA</h1>
+</div>
+<article>
+<% 
+data = YAML.load_file('data/calendar.yaml')
+@calendar_content = data['calendar']['facts']
+@calendar_content.each do |variable|
+%>
+    <div class="facts_<%=variable['name']%> facts">
+        <img src="img/<%=variable['img']%>" alt="<%=variable['alt'] %>">
+         <div class="facts_text"><%=variable['content']%></div>
+    </div>
+<%
+end
+%>
+</article>
