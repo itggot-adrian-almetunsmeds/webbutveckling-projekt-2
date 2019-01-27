@@ -88,6 +88,7 @@ header {
   filter: blur(5px); }
 
 .countdown {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +182,7 @@ header {
     grid-area: "image";
     max-width: 90px;
     max-height: 90px;
-    margin: auto;
+    margin: auto 5px auto auto;
     border-radius: 15px;
     /* ----------- Desktop ----------- */ }
     @media only screen and (min-width: 1224px) {
@@ -322,7 +323,7 @@ footer {
       position: relative;
       bottom: 30px;
       left: -22.5px;
-      padding-right: 0px; } }
+      padding-right: 0; } }
   .deals_price p {
     font-size: 0.7rem;
     color: white;
