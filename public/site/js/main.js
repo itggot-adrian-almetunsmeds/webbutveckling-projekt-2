@@ -19,6 +19,8 @@ function navigation() {
     navBackground.classList.toggle("nav_background_active");
     navIcon = document.querySelector(".nav_menu > i");
     navIcon.classList.toggle("nav_icon_active");
+    navIcon = document.querySelector(".wrapper");
+    navIcon.classList.toggle("active_blur");
 }
 // Function for the calendar popups
 function calendarReveal(input) {

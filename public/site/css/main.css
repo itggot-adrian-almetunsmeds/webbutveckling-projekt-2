@@ -84,6 +84,9 @@ header {
 .nav_icon_active {
   left: 145px !important; }
 
+.active_blur {
+  filter: blur(5px); }
+
 .countdown {
   display: flex;
   justify-content: center;
@@ -236,6 +239,7 @@ article {
   border-radius: 3px;
   margin-top: 10px;
   padding: 10px 0 10px 0;
+  width: 100%;
   display: grid;
   grid-template-rows: auto;
   grid-gap: 20px;
@@ -243,10 +247,8 @@ article {
   grid-template-areas: "article_image article_text";
   /* ----------- Desktop ----------- */ }
   @media only screen and (min-width: 1224px) {
-    .facts {
-      width: 49.6%; }
-      .facts:nth-child(2n) {
-        margin-left: 10px; } }
+    .facts:nth-child(2n) {
+      margin-left: 10px; } }
   .facts img {
     padding: 5px;
     border-radius: 15px;
@@ -262,11 +264,7 @@ footer {
   height: 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0; }
+  align-items: center; }
 
 .deals_wrapper {
   display: flex;
@@ -286,7 +284,7 @@ footer {
   margin: 0;
   display: grid;
   grid-template-columns: 20% auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 40px;
   grid-template-areas: "img description" "img price";
   grid-gap: 10px;
   border-bottom: solid 2px rgba(0, 0, 0, 0.7);
@@ -295,8 +293,9 @@ footer {
     grid-area: img;
     padding-top: 5px;
     padding-bottom: 5px;
-    max-width: 100%;
-    max-height: 100%; }
+    width: 100%;
+    max-height: 80%;
+    border-radius: 2px; }
 
 .deals_content:nth-last-child(1) {
   border-bottom: none; }
@@ -316,7 +315,14 @@ footer {
   text-align: right;
   padding-right: 10%;
   font-size: 1.3rem;
+  /* ----------- Desktop ----------- */
   /* ----------- Desktop ----------- */ }
+  @media only screen and (min-width: 1224px) {
+    .deals_price {
+      position: relative;
+      bottom: 30px;
+      left: -22.5px;
+      padding-right: 0px; } }
   .deals_price p {
     font-size: 0.7rem;
     color: white;
@@ -403,4 +409,5 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center; }
+  align-items: center;
+  transition: all linear 0.4s; }
