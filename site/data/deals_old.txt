@@ -1,0 +1,18 @@
+image url,          This is only a template row
+img alt text,       This is only a template row
+product name        This is only a template row
+description text,   This is only a template row
+120$                This is only a template row
+300$                This is only a template row
+img/drone@0,5x.jpg
+Drönare
+DJI Mavic Pro - Liten drönare med stora egenskaper
+4K @ 30 fps och 12 mp foton<br>Hindersensor och intelligenta flyglägen<br>Upp till 27 minuter flygtid<br>Ny kopplingsteknik och mindre handkontroll<br>Sportläge upp till 65 km/h
+7000 SEK
+9750 SEK
+img/gopro@0,5x.jpg
+GoPro monterad på ett stativ
+GoPro HERO7 Silver med 10mp och WDR-stöd
+Fånga 4K-video i 30 fps, 1080p i 60 fps<br>Effektiv bildstabilisering<br>GPS med geotaggning<br>2" touch-display med zoom-funktion<br>Vattentät utan undervattenshus<br>Styr kameran med pekskärmen eller rösten
+3400 SEK
+4500 SEK

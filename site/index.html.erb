@@ -7,56 +7,21 @@
     </div>
     <div class="textblock">
         <p>Kvar till aftonen<br></p> 
-        <p>Men är det Jul dag eller Hjul dag?<br>Låt kalendern säga dig det.</p> 
+        <p>Men är det en Jul dag eller Hjul dag idag?<br>Låt kalendern säga dig det.</p> 
     </div>
 </div>
 <div class="calendar">
 </div>
 <% 
-    date = 1
-    i=0
-    # In the array 1 place ref to image, then after that place 
-    # the text that will be displayed, then the alt text
-    image_content = [
-    "img/cold-colors-forest-688660_560_420.jpg", 'Idag är det en Juldag! Det är ju ändå den 1 December. <br> "Anledningen till att vi alla går på högvarv inför julen med den eviga, oåterhållsamma och ofta knasiga julklappsshoppingen är antagligen att vi inte riktigt vet hur vi ska uttrycka vår kärlek i ord." -Livet.se', "Bild på en snötäckt väg ute i skogen.",
-    "https://picsum.photos/200/300/", "", "#",
-    "https://picsum.photos/200/300/", "Idag är det en Juldag! <br>I Sverige konsumerar vi 9 000 ton julskina under enbart december månad.", "#",
-    "https://picsum.photos/200/300/?blur", 'Idag är det en Juldag! <br> "Det måste vara en mänsklig rättighet att tycka att det är fint att vara ensam också på en julafton." -Livet.se', "#",  
-    "https://picsum.photos/200/300/", "Idag är det Hjul dag<br>", "#",
-    "https://picsum.photos/200/300/", 'Idag är det en Juldag! <br>Visste du att medelsvensken öskar sig "absolut ingenting" i julklapp. Följt av "ingenting" kommer pengar och därefter upplevelser. <br>Och bara 1% av alla svenskar önskar sig fred på jorden. <br>Trots det köper svenskar 40 miljoner julklappar. -expressen.se', "#",
-    "https://picsum.photos/200/300/", "", "#",
-    "https://picsum.photos/200/300/", "", "#",
-    "https://", "Idag är det en Juldag! <br>Smålänningar är de verkligen snåla? Enligt Handelns utredningsinstitut så planerade smålänningar att lägga i snitt 5 946kr per person under julen. Det är mest i Sverige. Västsvenskar däremot är snålast i sammanhanget.", "#",
-    "https://", "", "#",
-    "https://", "Idag är det en Juldag! <br>Svenskar dricker även 40 miljoner liter julmust per år enligt Carlsberg. Hur många toalettbesök är inte det?", "#",
-    "https://", "Idag är det en Juldag! <br>Vi svenskar dricker cirka 5 miljoner liter glögg vare jul. Jajamensan 5 miljoner liter. Troligen skjuter försäljningen av russin och mandlar även i höjden under jul.", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "Idag är det en Juldag! <br>Visste du att julgranen är ätbar. Iallafall så länge det inte är en i plast åtminstonde. Observera även det att kulorna och den större delen av dekorationen inte heller är bra för matsmältningen.", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    "https://", "", "#",
-    ]
-
-while date<=24
+data = YAML.load_file('data/calendar.yaml')
+@calendar_content = data['calendar']['content']
+@calendar_content.each do |variable|
 %>
-
-<div class="calendar_content" id="calendar_content_<%=date%>">
-    <img src="<%=image_content[i]%>" alt="<%=image_content[i+2]%>">
-    <div class="calendar_content_text"><%=image_content[i+1]%></div>
-</div>
+    <div class="calendar_content" id="calendar_content_<%=variable['date']%>">
+        <img src="img/<%=variable['img']%>" alt="<%= variable['alt']%>">
+        <div class="calendar_content_text"><%=variable['content']%></div>
+    </div>
 
 <%
-    date += 1
-    i += 3
 end
 %>
-
-

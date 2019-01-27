@@ -1,0 +1,24 @@
+image url,          This is only a template row
+img alt text,       This is only a template row
+product name        This is only a template row
+description text,   This is only a template row
+120$ new price      This is only a template row
+300$ old price      This is only a template row
+img/sony_speaker@0,5x.jpg
+Svart portabel högtaler från Sony
+Sony STSXB2/BLK Portable trådlös högtalare med Bluetooth
+Extra bas för hårda, kickiga ljud. Smärtfri strömmning med NFC och Bluetooth <br>Lyssa på musik längre med 12 timmars batteri kapacitet. Stänk tålig design. Perfekt för pool partyt. <br>Kompakt, portabel design.
+600 SEK
+990 SEK
+img/sd_cards@0,75x.jpg
+SD kort av olika storlek
+Micro SD 128GB 64GB 32GB SDHC - för telefon/surfplatta/dator
+Plug and play (Inga extra program behövs)<br>Micro SD + TF format, Hög läs och skriv hastighet <br>8GB,16GB,32GB,64GB,128GB lagrings kapacitet. <br>Fungerar med telefoner, kameror, mp3/mp4 spelare och fler. <br>Kan användas som Micro SD eller SD kort. <br>Max/Min arbets temperatur. -25°C - 85°C <br>Max/Min förvarings temperatur. -40°c - 85°C <br>Klass 10, läs hastighet ca 15-30MB/S, skrivhastighet ca 9-12MB/S
+26 SEK
+80 SEK
+img/fishing_lures@0,5x.jpg
+Fiske bete liggande i en låda.
+Fiske beten 32st - Flygfiske beten torrt/vått fiske
+Artificiel simulering av räkor. <br>Wooly Streamer Fly Flies <br>Låd storlek: ca 115mm * 78mm * 28mm <br>Vikt 46g<br>Lådfärg: Fraktas slumpvis
+90 SEK
+140 SEK
